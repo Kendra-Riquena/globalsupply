@@ -17,9 +17,19 @@ body {
     color: var(--primary-color);
 }
 
+section {
+    margin-bottom: 52px;
+}
+
 h1 {
     font-size: 32px;
     font-weight: 600;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 32px;
 }
 
 .button {
@@ -35,5 +45,10 @@ h1 {
 @media screen and (min-width:992px) {
     h1 {
         font-size: 48px
+    }
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 48px;
     }
 }
