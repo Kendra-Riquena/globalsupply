@@ -36,7 +36,36 @@
     font-weight: 500;
 }
 
-@media screen and (min-width:992px) {
+.card {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.home-cards {
+    margin: 24px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    align-content: center;
+}
+
+.home-cards .card .card-title {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.home-cards .card hr {
+    color: var(--primary-color);
+}
+
+.home-cards .card .card-text {
+    color: var(--primary-color);
+}
+
+
+@media screen and (min-width:992px) {    
     .hero-home {
         height: 65vh;
     }
@@ -58,5 +87,14 @@
         background-color: var(--secondary-color);
     }
 
+    .home-cards {
+        flex-direction: row;
+        margin: -50px auto 24px;
+        justify-content: space-between;
+    }
+
+    .home-cards .card {
+        width: 33%;
+    }
 }
 
