@@ -2,11 +2,37 @@
     --primary-color: #003441;
     --secondary-color: #F29120;
     --tertiary-color: #0F98AA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: "Poppins", sans-serif;
     font-style: normal;
-    background-color: #F29120;
 }
 
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.button {
+    background-color: var(--secondary-color);
+    color: var(--white);
+} 
+
+.button:hover {
+    background-color: var(--tertiary-color);
+    color: var(--black);
+} 
+
+@media screen and (min-width:992px) {
+    h1 {
+        font-size: 48px
+    }
+}

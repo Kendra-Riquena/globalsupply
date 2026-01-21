@@ -35,7 +35,7 @@ header {
 }
 
 .nav-logo {
-    width: 160px;
+    width: 180px;
 }
 
 .nav-phone {
@@ -48,6 +48,16 @@ header {
 
 .nav-phone span {
     font-weight: 600;
+}
+
+.menu-header span a {
+    text-decoration: none !important;
+    color: #FFFFFF;
+    transition: 500ms;
+}
+
+.menu-header span a:hover {
+    color: var(--tertiary-color);
 }
 
 .menu-primary a {
@@ -94,23 +104,33 @@ header {
 
     .menu-header {
         position: static;
-        padding-bottom: 20px;
+        padding-bottom: 16px;
+    }
+
+    .nav-logo {
+        padding-top: 6px;
     }
 
     .menu-primary {
         position: absolute;
         top: 80%;
-        left: 0;
+        left: 1%;
         background-color: #FFFFFF;
         padding: 8px;
         border-radius: 8px;
-        width: 100%;
+        width: 98%;
         gap: 25px;
     }
 
     .menu-primary a,
     .menu-primary .btn-search {
         color: var(--primary-color);
+    
+    }
+
+    .menu-primary a:hover,
+    .menu-primary .btn-search:hover {
+        color: var(--secondary-color);
     
     }
 
