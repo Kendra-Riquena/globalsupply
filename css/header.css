@@ -60,6 +60,15 @@ header {
     color: var(--secondary-color);
 } 
 
+.form-search {
+    border-radius: 20px;
+}
+
+.btn-search {
+    font-size: 24px;
+    padding: 0;
+    color: #FFFFFF;
+}
 
 @media (min-width: 992px) {
     .menu-secondary {
@@ -70,7 +79,45 @@ header {
         padding-left: 12px;
     }
 
+    header .navbar .container-fluid {
+        align-items: start !important;
+        flex-wrap: wrap;
+    }
+
+    .menu-header {
+        justify-content: end;
+    }
+
     .nav-phone {
         display: block;
     }
+
+    .menu-header {
+        position: static;
+        padding-bottom: 20px;
+    }
+
+    .menu-primary {
+        position: absolute;
+        top: 80%;
+        left: 0;
+        background-color: #FFFFFF;
+        padding: 8px;
+        border-radius: 8px;
+        width: 100%;
+        gap: 25px;
+    }
+
+    .menu-primary a,
+    .menu-primary .btn-search {
+        color: var(--primary-color);
+    
+    }
+
+    .search-container {
+        margin-right: 0;
+        width: 42%;
+    }
+
+
 }
