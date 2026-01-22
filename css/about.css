@@ -1,6 +1,8 @@
 .hero-about {
-    background: url(../img/banner-about.jpg) no-repeat center;
+    background-image: linear-gradient(#f2902040, #F2912040), url(../img/banner-about.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
 }
 
 .about-differentials {
