@@ -1,0 +1,142 @@
+header {
+    background-color: var(--primary-color);
+}
+
+.menu-secondary {
+    display: none;
+}
+
+.menu-secondary-links {
+    display: flex;
+    gap: 24px;
+}
+
+.menu-secondary ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    padding-left: 0;
+}
+
+.menu-secondary a {
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.6s;
+}
+
+.menu-secondary a:hover {
+    color: var(--tertiary-color) !important;
+}
+
+.menu-secondary a i {
+    font-size: 20px;
+}
+
+.nav-logo {
+    width: 180px;
+}
+
+.nav-phone {
+    display: none;
+    text-align: center;
+    padding: 2px 8px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+}
+
+.nav-phone span {
+    font-weight: 600;
+}
+
+.menu-header span a {
+    text-decoration: none !important;
+    color: #FFFFFF;
+    transition: 500ms;
+}
+
+.menu-header span a:hover {
+    color: var(--tertiary-color);
+}
+
+.menu-primary a {
+    color: var(--white);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.menu-primary .live {
+    color: var(--secondary-color);
+} 
+
+.form-search {
+    border-radius: 20px;
+}
+
+.btn-search {
+    font-size: 24px;
+    padding: 0;
+    color: var(--white);
+}
+
+@media (min-width: 992px) {
+    .menu-secondary {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    header .navbar .container-fluid {
+        align-items: start !important;
+        flex-wrap: wrap;
+    }
+
+    .menu-header {
+        justify-content: end;
+    }
+
+    .nav-phone {
+        display: block;
+    }
+
+    .menu-header {
+        padding-bottom: 16px;
+    }
+
+    .nav-logo {
+        padding-top: 6px;
+    }
+
+    .menu-primary {
+        position: absolute;
+        top: 80%;
+        left: 1%;
+        background-color: var(--white);
+        padding: 8px;
+        border-radius: 8px;
+        width: 98%;
+        gap: 25px;
+    }
+
+    .menu-primary a,
+    .menu-primary .btn-search {
+        color: var(--primary-color);
+    
+    }
+
+    .menu-primary a:hover,
+    .menu-primary .btn-search:hover {
+        color: var(--secondary-color);
+    
+    }
+
+    .search-container {
+        margin-right: 0;
+        width: 42%;
+    }
+
+
+}
