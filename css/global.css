@@ -35,6 +35,8 @@ h2 {
 .button {
     background-color: var(--secondary-color);
     color: var(--white);
+    text-transform: uppercase;
+    font-weight: 500;
 } 
 
 .button:hover {

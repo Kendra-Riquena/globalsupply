@@ -31,11 +31,6 @@
     
 }
 
-.hero-home .button {
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
 .card {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -68,12 +63,73 @@
     text-align: center;
 }
 
-.home-description h2 {
+.home-description .home-description-emphasis {
     color: var(--secondary-color);
+    font-weight: 600;
 }
 
 .home-description-bold {
     font-weight: 600;
+}
+
+.home-solutions {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 0;
+    padding: 32px 0;
+}
+
+.home-solutions .brands {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(64px, 64px);
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.home-solutions .img-brands {
+    max-height: 80px;
+    width: 125px;
+    margin: 0 auto;
+}
+
+.home-solutions .img-brands-short {
+    height: 64px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.home-solutions .img-brands-center {
+    grid-column: span 2;
+}
+
+.home-solutions ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-solutions ul span {
+    font-weight: 600;
+}
+
+@media screen and (min-width:768px) {
+    .home-solutions {
+        background: url(../img/bg-home-tablet.jpg) no-repeat center; 
+        background-size: cover;
+    }
+
+    .home-solutions .brands {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .home-solutions .img-brands-center {
+        grid-column: auto;
+    }
 }
 
 @media screen and (min-width:992px) {    
@@ -107,5 +163,15 @@
     .home-cards .card {
         width: 33%;
     }
+
+    .home-solutions .brands {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
 }
 
+@media screen and (min-width:1200px) {
+    .home-solutions {
+        background: url(../img/bg-home-desktop.jpg) no-repeat;
+        background-size: cover;
+    }
+}
