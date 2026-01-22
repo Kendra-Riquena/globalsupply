@@ -1,0 +1,52 @@
+.hero-brands {
+    background-image: linear-gradient(#f2902040, #F2912040), url(../img/men-reading-barcode-in-armazen.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.brands-container {
+    background-color: var(--primary-color);
+    margin-bottom: 0;
+}
+
+.brands-container .brands {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(64px, 64px);
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.brands-container .img-brands {
+    max-height: 80px;
+    width: 125px;
+    margin: 0 auto;
+}
+
+.brands-container .img-brands-short {
+    height: 64px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.brands-container .img-brands-center {
+    grid-column: span 2;
+}
+
+@media screen and (min-width:768px) {
+    .brands-container .brands {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .brands-container .img-brands-center {
+        grid-column: auto;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .brands-container .brands {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
