@@ -1,12 +1,6 @@
 .hero-home {
     background: url(../img/banner-home.png) no-repeat center;
     background-size: cover;
-    width: 100%;
-    height: 88vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .hero-home .hero-line {
@@ -65,10 +59,6 @@
 
 .home-description .home-description-emphasis {
     color: var(--secondary-color);
-    font-weight: 600;
-}
-
-.home-description-bold {
     font-weight: 600;
 }
 
@@ -133,10 +123,6 @@
 }
 
 @media screen and (min-width:992px) {    
-    .hero-home {
-        height: 65vh;
-    }
-
     .hero-home-group {
         display: flex;
         flex-direction: row;

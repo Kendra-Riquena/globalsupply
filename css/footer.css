@@ -1,7 +1,7 @@
 footer {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 24px 0;
+    padding: 16px 0;
     text-align: center;
     border-top: 1px solid var(--white);
 }
@@ -27,6 +27,7 @@ footer .footer-links ul {
     font-size: 12px;
     list-style: none;
     padding: 0;
+    margin-bottom: 0;
 }
 
 footer .footer-links li {
@@ -43,7 +44,7 @@ footer .footer-links li a:hover {
 }
 
 .copyright {
-    margin-top: 32px;
+    margin: 12px 0 0;
     font-size: 14px;
 }
 

@@ -1,0 +1,46 @@
+.hero-about {
+    background: url(../img/banner-about.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.about-differentials {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.differential-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 16px;
+}
+
+.about-img {
+    width: 100%;
+}
+
+.choice-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.call-to-action-container {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width:992px) {
+    .differential-container {
+        flex-direction: row;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .choice-container {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
