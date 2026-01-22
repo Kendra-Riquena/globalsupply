@@ -102,7 +102,7 @@
     </header>
     <main>
         <section>
-            <div class="hero hero-brands">
+            <div class="hero hero-services">
                 <div class="container">
                     <h1 class="text-light">Complete Import & Supply <br> Solutions for Industrial Automation</h1>
                 </div>
@@ -119,9 +119,13 @@
                     verified authenticity.</p>
             </div>
         </section>
-        <section>
+        <section class="services-container py-5">
             <div class="container">
-                <div>
+                <div class="col-lg-6">
+                    <img src="../img/men-working-with-a-tablet.jpg" alt="Men working with a tablet"
+                        class="about-img">
+                </div>
+                <div class="col-lg-6">
                     <h2>What We Offer</h2>
                     <h3>Full Import Management for Automation and Electrical Products</h3>
                     <p>We handle the entire import workflow for parts, modules, components, and equipment, ensuring
@@ -139,17 +143,15 @@
                     <p>Our team understands the demands of industrial operations and ensures clarity, accuracy, and
                         agility in every request.</p>
                 </div>
-                <div>
-                    <img src="../img/men-working-with-a-tablet.jpg" alt="Men working with a tablet" class="">
-                </div>
             </div>
         </section>
-        <section>
+        <section class="why-choose-container">
             <div class="container">
-                <div>
-                    <img src="../img/containers-airplane-and-trucks.jpg" alt="airplanes and trucks with containers">
+                <div class="col-lg-6">
+                    <img src="../img/containers-airplane-and-trucks.jpg" alt="airplanes and trucks with containers"
+                        class="about-img">
                 </div>
-                <div>
+                <div class="col-lg-6">
                     <h2>Why Companies Choose Global Supply and Automation</h2>
                     <ul>
                         <li>Specialists in supply and import for industrial automation and electrical products</li>
@@ -161,17 +163,18 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="services-form py-5">
             <div class="container">
-                <p>With Global Supply and Automation, importing industrial components becomes simple, safe, and efficient — so your operation never slows down.</p>
+                <p>With Global Supply and Automation, importing industrial components becomes simple, safe, and
+                    efficient — so your operation never slows down.</p>
                 <h3>Get in Touch</h3>
                 <form action="">
-                    <label for="">Full Name</label>
-                    <input type="text">
-                    <label for="">Email Address</label>
-                    <input type="email">
-                    <label for="">Message</label>
-                    <textarea name="" id=""></textarea>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message</label>
+                    <textarea name="" id="message" required></textarea>
                     <button type="submit" class="btn button">Send Message</button>
                 </form>
             </div>
