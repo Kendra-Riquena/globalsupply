@@ -102,61 +102,151 @@
     </header>
     <main>
         <section>
-            <div class="hero hero-services">
+            <div class="hero hero-careers">
                 <div class="container">
                     <h1 class="text-light">Join our talent <br> network</h1>
                 </div>
             </div>
         </section>
-        <section>
+        <section class="careers-form">
             <div class="container">
-                <p>Please complete the form below and upload your résumé. Our team will review your information and contact you if your profile matches an open position or future opportunities.</p>
-                <form action="">
-                    <fielset>
+                <p>Please complete the form below and upload your résumé. Our team will review your information and
+                    contact you if your profile matches an open position or future opportunities.</p>
+                <form>
+                    <fieldset>
                         <legend>Personal Information</legend>
-                        <label for="">Full Name</label>
-                        <input type="text">
-                        <label for="">E-mail Address</label>
-                        <input type="text">
-                        <label for="">Phone / WhatsApp</label>
-                        <input type="text">
-                        <label for="">City / State / Country</label>
-                        <input type="text">
-                    </fielset>
+                        <label for="candidateName">Full Name*</label>
+                        <input type="text" id="candidateName" name="name" required>
+                        <label for="candidateEmail">E-mail Address*</label>
+                        <input type="email" id="candidateEmail" name="email" required>
+                        <label for="candidatePhone">Phone / WhatsApp*</label>
+                        <input type="tel" id="candidatePhone" name="phone" required>
+                        <label for="candidateAddress">City / State / Country*</label>
+                        <input type="text" id="candidateAddress" name="address" required>
+                    </fieldset>
                     <fieldset>
                         <legend>Professional Details</legend>
-                        <label for="">Area of Interest</label>
-                        <input type="text">
+                        <p>Area of Interest*</p>
+                        <div class="radio-form">
+                            <div>
+                                <input type="radio" id="candidateOptionSales" name="InterestArea" value="sales_and_business_development" required>
+                                <label for="candidateOptionSales">Sales & Business Development</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="candidateOptionSupply" name="InterestArea" value="supply_and_procurement">
+                                <label for="candidateOptionSupply">Supply & Procurement</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="candidateOptionEngineering" name="InterestArea" value="technical_and_engineering">
+                                <label for="candidateOptionEngineering">Technical / Engineering</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="candidateOptionLogistics" name="InterestArea" value="operation_and_logistics">
+                                <label for="candidateOptionLogistics">Operations & Logistics</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="candidateOptionAdministrative" name="InterestArea" value="administrative">
+                                <label for="candidateOptionAdministrative">Administrative</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="candidateOptionOther" name="InterestArea" value="other">
+                                <label for="candidateOptionOther">Other</label>
+                            </div>
+                        </div>
                         <label for="">Other:</label>
                         <input type="text">
-                        <label for="">Position Type</label>
-                        <input type="text">
+                        <p>Position Type*</p>
+                        <div class="radio-form">
+                            <div>
+                                <input type="radio" name="positionType" id="candidateTypeFullTime" value="full_time" required>
+                                <label for="candidateTypeFullTime">Full-Time</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="positionType" id="candidateTypePartTime" value="part_time">
+                                <label for="candidateTypePartTime">Part-Time</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="positionType" id="candidateTypeInternship" value="internship">
+                                <label for="candidateTypeInternship">Internship</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="positionType" id="candidateTypeContractor" value="project-based_and_contractor">
+                                <label for="candidateTypeContractor">Project-Based / Contractor</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="positionType" id="candidateTypeTalentPool" value="talent_pool">
+                                <label for="candidateTypeTalentPool">Talent Pool</label>
+                            </div>
+                        </div>
+                        <p>Availability to Start*</p>
+                        <div class="radio-form">
+                            <div>
+                                <input type="radio" name="optionAvailabilityStart" id="candidateStartImmediately" value="immediately" required>
+                                <label for="candidateStartImmediately">Immediately</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="optionAvailabilityStart" id="candidateStartTwoWeeks" value="within_two_weeks">
+                                <label for="candidateStartTwoWeeks">Within 2 Weeks</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="optionAvailabilityStart" id="candidateStartOneMonth" value="within_thirty_days">
+                                <label for="candidateStartOneMonth">Within 30 Days</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="optionAvailabilityStart" id="candidateStartFlexible" value="flexible">
+                                <label for="candidateStartFlexible">Flexible</label>
+                            </div>
+                        </div>
                     </fieldset>
                     <fieldset>
                         <legend>Experience</legend>
-                        <label for="">Professional Summary</label>
-                        <input type="text">
-                        <label for="">LinkedIn Profile</label>
-                        <input type="text">
-                        <label for="">Portfolio / Website</label>
-                        <input type="text">
+                        <label for="candidateProfessionalSummary">Professional Summary*</label>
+                        <small>Up to 1500 characters</small>
+                        <textarea type="text" id="candidateProfessionalSummary" name="professionalSummary" maxlength="1500" required></textarea>
+                        <label for="candidateLinkedin">LinkedIn Profile</label>
+                        <input type="url" id="candidateLinkedin" name="linkedin">
+                        <label for="candidatePortifolio" >Portfolio / Website</label>
+                        <input type="url" id="candidatePortifolio" name="porfolio">
                     </fieldset>
                     <fieldset>
                         <legend>File Upload</legend>
-                        <label for="">Upload Résumé (PDF only)</label>
-                        <input type="text">
-                        <label for="">Upload Cover Letter</label>
-                        <input type="text">
+                        <label for="candidateCv">Upload Résumé (PDF only)*</label>
+                        <input type="file" id="candidateCv" name="cv" accept=".pdf" required>
+                        <label for="candidateCoverLetter">Upload Cover Letter</label>
+                        <input type="file" accept=".pdf" id="candidateCoverLetter" name="coverLetter">
                     </fieldset>
                     <fieldset>
                         <legend>Additional Questions (optional)</legend>
-                        <label for="">Why are you interested in joining Global Supply Automation?</label>
-                        <textarea name="" id=""></textarea>
-                        <label for="">How did you hear about us?</label>
-                        <input type="text">
+                        <label for="candidateMessage">Why are you interested in joining Global Supply Automation?</label>
+                        <textarea name="message" id="candidateMessage"></textarea>
+                        <p>How did you hear about us?</p>
+                        <div class="radio-form">
+                            <div>
+                                <input type="radio" id="candidateOptionReferral" name="howHearAbout" value="referal">
+                                <label for="candidateOptionReferral">Referal</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="candidateOptionLinkedin" name="howHearAbout" value="linkedin">
+                                <label for="candidateOptionLinkedin">LinkedIn</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="candidateOptionWebsite" name="howHearAbout" value="website">
+                                <label for="candidateOptionWebsite">Website</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="candidateOptionSocialMedia" name="howHearAbout" value="social_media">
+                                <label for="candidateOptionSocialMedia">Social Media</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="candidateOptionOtherWay" name="howHearAbout" value="otherWay">
+                                <label for="candidateOptionOtherWay">Other</label>
+                            </div>
+                        </div>
                     </fieldset>
-                    <input type="text" name="" id="">
-                    <label for="">I authorize Global Supply Automation to store and process my personal data for recruitment purposes, following applicable data privacy regulations.</label>
+                    <div class="authorization">
+                        <input type="checkbox" name="authorization" id="candidateAuthorization" required>
+                        <label for="candidateAuthorization">I authorize Global Supply Automation to store and process my personal data for recruitment purposes, following applicable data privacy regulations.</label>
+                    </div>
                     <button type="submit" class="btn button">Submit Application</button>
                 </form>
             </div>

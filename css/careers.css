@@ -1,3 +1,56 @@
-.live {
-    color: var(--secondary-color);
+.hero-careers {
+    background-image: linear-gradient(#f2902040, #F2912040), url(../img/two-men-holding-hands.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.careers-form form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.careers-form fieldset{
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.careers-form input,
+.careers-form textarea {
+    margin-bottom: 16px;
+}
+
+.careers-form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.radio-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.careers-form p {
+    margin: 16px 0 8px;
+}
+
+.authorization {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: start;
+    margin: 24px 0;
+}
+
+.authorization input {
+    margin-top: 5px;
+}
+
+@media screen and (min-width:992px) {
+    .radio-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
