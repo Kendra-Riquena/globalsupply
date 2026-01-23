@@ -1,0 +1,23 @@
+.hero-contact {
+    background-image: linear-gradient(#f2902040, #F2912040), url(../img/people-working.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.contact-container form {
+        max-width: 700px;
+        margin: 0 auto 24px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 100px;
+}
