@@ -20,10 +20,6 @@
     font-size: 18px;
 }
 
-.services-container img {
-    margin-left: 16px;
-}
-
 .why-choose-container .container {
     display: flex;
     flex-direction: column;
@@ -63,6 +59,10 @@
         align-items: center;
         justify-content: space-between;
         gap: 0;
+    }
+
+    .services-container img {
+        margin-left: 16px;
     }
 
     .why-choose-container .container {
