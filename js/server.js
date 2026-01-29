@@ -21,8 +21,8 @@ app.post('/send-email', upload.fields([{ name: 'cv' }, { name: 'coverLetter' }])
         port: 465,
         secure: true,
         auth: {
-            user: 'kendracruz29@gmail.com',
-            pass: 'iajgxtaroksrfjkx'
+            user: '',
+            pass: ''
         }
     });
 
@@ -74,8 +74,8 @@ app.post('/send-email', upload.fields([{ name: 'cv' }, { name: 'coverLetter' }])
 
     try {
         await transporter.sendMail({
-            from: 'kendracruz29@gmail.com',
-            to: 'kendracruz29@gmail.com',
+            from: '',
+            to: '',
             replyTo: email,
             subject: subject,
             text: text,
