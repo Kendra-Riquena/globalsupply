@@ -57,28 +57,30 @@ if (formCareers) {
     formCareers.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const dadosCareers = {
-            name: document.getElementById('candidateName').value,
-            email: document.getElementById('candidateEmail').value,
-            phone: document.getElementById('candidatePhone').value,
-            address: document.getElementById('candidateAddress').value,
-            interestArea: document.querySelector('input[name="InterestArea"]:checked')?.value || '',
-            positionType: document.querySelector('input[name="positionType"]:checked')?.value || '',
-            availability: document.querySelector('input[name="optionAvailabilityStart"]:checked')?.value || '',
-            professionalSummary: document.getElementById('candidateProfessionalSummary').value,
-            linkedin: document.getElementById('candidateLinkedin').value,
-            portfolio: document.getElementById('candidatePortifolio').value,
-            cv: document.getElementById('candidateCv').value.split('\\').pop(),
-            coverLetter: document.getElementById('candidateCoverLetter').value.split('\\').pop(),
-            message: document.getElementById('candidateMessage').value,
-            howHearAbout: document.querySelector('input[name="howHearAbout"]:checked')?.value || '',
-            authorization: document.getElementById('candidateAuthorization').checked ? 'Yes' : 'No'
-        };
+        const formData = new FormData();
+        formData.append('name', document.getElementById('candidateName').value);
+        formData.append('email', document.getElementById('candidateEmail').value);
+        formData.append('phone', document.getElementById('candidatePhone').value);
+        formData.append('address', document.getElementById('candidateAddress').value);
+        formData.append('interestArea', document.querySelector('input[name="InterestArea"]:checked')?.value || '');
+        formData.append('positionType', document.querySelector('input[name="positionType"]:checked')?.value || '');
+        formData.append('availability', document.querySelector('input[name="optionAvailabilityStart"]:checked')?.value || '');
+        formData.append('professionalSummary', document.getElementById('candidateProfessionalSummary').value);
+        formData.append('linkedin', document.getElementById('candidateLinkedin').value);
+        formData.append('portfolio', document.getElementById('candidatePortifolio').value);
+        formData.append('message', document.getElementById('candidateMessage').value);
+        formData.append('howHearAbout', document.querySelector('input[name="howHearAbout"]:checked')?.value || '');
+        formData.append('authorization', document.getElementById('candidateAuthorization').checked ? 'Yes' : 'No');
+
+        const cvFile = document.getElementById('candidateCv').files[0];
+        if (cvFile) formData.append('cv', cvFile);
+
+        const coverLetterFile = document.getElementById('candidateCoverLetter').files[0];
+        if (coverLetterFile) formData.append('coverLetter', coverLetterFile);
 
         const resposta = await fetch('http://localhost:3000/send-email', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(dadosCareers)
+            body: formData
         });
 
         if (resposta.ok) {

@@ -1,12 +1,14 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+const multer = require('multer');
 const app = express();
+const upload = multer();
 
 app.use(express.json());
 app.use(cors());
 
-app.post('/send-email', async (req, res) => {
+app.post('/send-email', upload.fields([{ name: 'cv' }, { name: 'coverLetter' }]), async (req, res) => {
     const {
         name, company, email, phone, message,
         address, interestArea, positionType, availability,
@@ -19,16 +21,32 @@ app.post('/send-email', async (req, res) => {
         port: 465,
         secure: true,
         auth: {
-            user: '',
-            pass: ''
+            user: 'kendracruz29@gmail.com',
+            pass: 'iajgxtaroksrfjkx'
         }
     });
 
     let subject = '';
     let text = '';
+    const attachments = [];
+
+    if (req.files) {
+        if (req.files.cv) {
+            attachments.push({
+                filename: req.files.cv[0].originalname,
+                content: req.files.cv[0].buffer
+            });
+        }
+        if (req.files.coverLetter) {
+            attachments.push({
+                filename: req.files.coverLetter[0].originalname,
+                content: req.files.coverLetter[0].buffer
+            });
+        }
+    }
 
     // Verifica se é o formulário de Carreiras (baseado em campos específicos)
-    if (interestArea || cv || positionType) {
+    if (interestArea || (req.files && (req.files.cv || req.files.coverLetter)) || positionType) {
         subject = `New Career Application: ${name}`;
         text = `Name: ${name}
                 Email: ${email}
@@ -40,8 +58,8 @@ app.post('/send-email', async (req, res) => {
                 Professional Summary: ${professionalSummary || 'N/A'}
                 LinkedIn: ${linkedin || 'N/A'}
                 Portfolio: ${portfolio || 'N/A'}
-                CV: ${cv || 'N/A'}
-                Cover Letter: ${coverLetter || 'N/A'}
+                CV: ${req.files?.cv ? req.files.cv[0].originalname : (cv || 'N/A')}
+                Cover Letter: ${req.files?.coverLetter ? req.files.coverLetter[0].originalname : (coverLetter || 'N/A')}
                 How did you hear about us: ${howHearAbout || 'N/A'}
                 Authorization: ${authorization || 'N/A'}
                 Message: ${message || 'N/A'}`;
@@ -56,11 +74,12 @@ app.post('/send-email', async (req, res) => {
 
     try {
         await transporter.sendMail({
-            from: '',
-            to: '',
+            from: 'kendracruz29@gmail.com',
+            to: 'kendracruz29@gmail.com',
             replyTo: email,
             subject: subject,
-            text: text
+            text: text,
+            attachments: attachments
         });
         res.status(200).send('Sent!');
     } catch (error) {
