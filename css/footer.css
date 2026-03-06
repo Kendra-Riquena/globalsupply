@@ -6,21 +6,16 @@ footer {
     border-top: 1px solid var(--white);
 }
 
-.footer-logo {
+/* Logo retirada por solicitação da empresa */
+/* .footer-logo {
     width: 100px;
     height: 86px;
     margin-bottom: 32px;
-}
+} */
 
 .footer-links {
     display: flex;
     flex-direction: column;
-}
-
-.footer-links p {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
 }
 
 footer .footer-links ul {
@@ -49,19 +44,16 @@ footer .footer-links li a:hover {
 }
 
 @media screen and (min-width:992px) {
-    .footer-container {
+    footer .footer-links ul {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-    }
-    
-    footer .footer-links ul {
         font-size: 16px;
     }
 
     footer .footer-links li {
-        margin-bottom: 10px;
+        margin-bottom: 16px;
     }
 }
 

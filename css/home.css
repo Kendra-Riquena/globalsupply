@@ -153,6 +153,10 @@
     .home-solutions .brands {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
+
+    .home-solutions h2 {
+        margin-top: 64px;
+    }
 }
 
 @media screen and (min-width:1200px) {
