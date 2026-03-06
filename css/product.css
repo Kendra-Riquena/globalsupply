@@ -28,7 +28,47 @@
 
 .product-container h2 {
     text-align: center;
-    
+
+}
+
+.product-container-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.product-container-img .product-img-demo {
+    max-width: 100%;
+}
+
+.product-img-qr-code {
+    display: none;
+}
+
+.product-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.product-price {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #EEEEEE;
+    border-radius: 8px;
+    padding: 6px;
+    width: 70%;
+    margin: 20px auto;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-product {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    width: 70%;
+    margin: 16px 15%;
 }
 
 @media screen and (min-width:768px) {
@@ -43,11 +83,72 @@
         margin: 0 0 16px;
         width: 30%;
     }
+
+    .product-container-img .product-img-demo {
+        max-width: 60%;
+    }
 }
 
 @media screen and (min-width:992px) {
     .hero-product .hero-product-group hr {
         width: 450px;
         max-width: none;
+    }
+
+    .product-container-demo {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .product-container-img {
+        max-width: 40%;
+        gap: 16px;
+    }
+
+    .product-container-img .product-img-demo {
+        max-width: 85%;
+    }
+
+    .product-img-qr-code {
+        display: block;
+        text-align: center;
+    }
+
+    .product-img-qr-code img {
+        width: 180px;
+    }
+
+    .product-features-list {
+        gap: 5px;
+    }
+
+    .product-features-list li {
+        font-size: 14px;
+    }
+
+    .product-container-demo h3 {
+        font-size: 22px;
+    }
+
+    .product-price {
+        font-size: 14px;
+        margin: 16px 0;
+    }
+
+    .btn-product {
+        width: 70%;
+        margin: 16px auto;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .product-container-img {
+        max-width: 50%;
+        gap: 16px;
+    }
+
+    .product-container-img .product-img-demo {
+        max-width: 60%;
     }
 }
