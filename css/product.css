@@ -26,6 +26,11 @@
     
 }
 
+.product-container h2 {
+    text-align: center;
+    
+}
+
 @media screen and (min-width:768px) {
     .hero-product .hero-product-group {
         flex-direction: row;
